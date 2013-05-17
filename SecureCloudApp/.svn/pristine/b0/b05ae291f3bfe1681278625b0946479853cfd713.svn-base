@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <script type="text/javascript" src="cordova-2.5.0.js"></script>
+        <script src="js/jquery-1.8.3.min.js"></script>
+  	    <script src="js/jquery.mobile-1.2.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.2.1.min.css" >            
+        <script type="text/javascript" src="js/home.js"></script>            
+        <title>安心云客户端</title>        
+    </head>
+    
+    <body>
+        
+        <div data-role="page" id="status_page">
+            <!--页眉-->
+            <div data-role="header" data-theme="a">
+                <h1>安心云客户端</h1>                                                 
+                <input type="button" value="后退" onclick="window.history.go(-1)" class="ui-btn-left" data-icon="arrow-l">                                                   
+            </div><!--/header-->
+            
+            <div id="content">
+<!-----------------------------------------------------------------资讯中心------------------------------------------------------------------>                    
+                <table id="info" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td>
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr><p style="text-align:center">状态页</p></tr>
+                                <tr>
+                                    <td><img src="http://www.free-sun.com.cn/images/fskj_23.jpg" width="318" height="30" alt="" /></td>
+                                    <td rowspan="2" width="10"></td>
+                                </tr>
+                                <tr>
+                                    <td background="http://www.free-sun.com.cn/images/fskj_28.jpg" width="318" height="167" valign="top">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td height="140" valign="top">
+                                                    <ul class="newslist">
+                                                        <li>·<a href="http://www.free-sun.com.cn/zixunzhongxin/gongsixinwen/2013-04-17/195.html" target="_blank">热烈祝贺江西飞尚科技有限公司三周年庆典...</a></li>
+                                                        <li>·<a href="http://www.free-sun.com.cn/zixunzhongxin/xingyezixun/2013-03-27/194.html" target="_blank">湖南娄底突发山体滑坡致一火车脱轨</a></li>
+                                                        <li>·<a href="http://www.free-sun.com.cn/zixunzhongxin/xingyezixun/2013-03-26/193.html" target="_blank">水流冲刷下危桥突坍塌 居民想过河需绕行胜...</a></li>
+                                                        <li>·<a href="http://www.free-sun.com.cn/zixunzhongxin/xingyezixun/2013-03-21/192.html" target="_blank">安阳市投资五千余万修桥 通车尚不足一年现...</a></li>
+                                                        <li>·<a href="http://www.free-sun.com.cn/zixunzhongxin/xingyezixun/2013-03-19/191.html" target="_blank">工程院院士称承德尾矿库占全国1/17 提解决...</a></li>
+                                                        <div id="newslist">
+                                                                
+                                                        </div>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="27" valign="bottom" align="right">
+                                                    <a href="http://www.free-sun.com.cn/e/action/listinfo/?classid=2"><span style="color:#990c18">更多>></span>
+                                                    </a>&nbsp;&nbsp;
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!--页脚-->
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="index.html" data-icon="home">主页</a></li>
+                        <li><a href="status.html" data-icon="star" class="ui-btn-active">状态</a></li>
+                        <li><a href="warning.html" data-icon="alert">告警</a></li>
+                        <li><a href="about.html" data-icon="info">关于</a></li>
+                    </ul>
+                </div><!--/navbar-->
+            </div><!--/footer-->
+
+        </div> <!--/page-->
+        
+	</body>                        
+</html>
+

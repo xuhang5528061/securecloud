@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <script type="text/javascript" src="cordova-2.5.0.js"></script>
+        <script src="js/jquery-1.8.3.min.js"></script>
+        <script src="js/jquery.mobile-1.2.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.2.1.min.css">                        
+        <script type="text/javascript" src="js/home.js"></script>
+            
+<!--
+        <script src="js/jquery-1.7.2.min.js"></script>
+        <script src="js/jquery.touchwipe.1.1.1.js"></script>
+        <script src="js/jquery.cycle.all.min.js"></script>
+        <script>
+                $(function(){
+                    //參數設定:
+                    //wipeLeft 向左滑動
+                    //wipeRight 向右滑動
+                    //wipeUp 向上滑動
+                    //wipeDown 向下滑動
+                    //min_move_x 水平移動最小像
+                    //min_move_y 垂直移動最小像素
+                    /*
+                    $("#imagegallery").touchwipe({
+                    wipeLeft: function() { alert("left"); },
+                    wipeRight: function() { alert("right"); },
+                    wipeUp: function() { alert("up"); },
+                    wipeDown: function() { alert("down"); },
+                    min_move_x: 20,
+                    min_move_y: 20,
+                    preventDefaultEvents: true
+                    });*/
+                  
+                    $('#imagegallery').cycle({
+                                        timeout: 0,
+                                        fx: 'scrollHorz',
+                                        next: '#next',
+                                        prev: '#prev'
+                    });
+                  
+                    $("#imagegallery").touchwipe({
+                                    wipeLeft: function() {
+                                               $("#imagegallery").cycle("next");
+                                    },
+                                    wipeRight: function() {
+                                               $("#imagegallery").cycle("prev");
+                                    }
+                    });
+                })
+        </script>
+            
+        <style>
+                body {
+                    margin:0;
+                    padding:0;
+                    background:#ccc;
+                }
+                #wrap {
+                    position:relative;
+                    width:310px;
+                    height:207px;
+                    margin:0 auto;
+                    overflow:hidden;
+                }
+                #imagegallery {
+                    width:310px;
+                    height:207px;
+                    background:#fff;
+                    margin:0 auto;
+                    margin-top:10px;
+                    overflow:hidden;
+                    text-align:center;
+                }
+                #imagegallery a {
+                    text-decoration:none;
+                    color:#333333;
+                }
+                #nav {
+                    width:310px;
+                    height:50px;
+                    position:absolute;
+                    top:75px;
+                    z-index:100;
+                }
+                #nav a {
+                    display:block;
+                    line-height:60px;
+                    width:60px;
+                    background:rgba(0,0,0,0.4);
+                    text-align:center;
+                    text-decoration:none;
+                    font-size:21px;
+                    color:#fff;
+                    font-family:Arial, Helvetica, sans-serif;
+                    border-radius: 17px;
+                }
+                #prev {
+                    float:left;
+                    margin-left:-15px;
+                }
+                #next {
+                    float:right;
+                    margin-right:-15px;
+                }
+        </style>
+-->                        
+            
+        <title>安心云客户端</title>                        
+    </head>
+    
+    <body>
+        
+        <div data-role="page" id="warning_page">
+            <!--页眉-->
+            <div data-role="header" data-theme="a">
+                <h1>安心云客户端</h1>
+                <input type="button" value="后退" onclick="window.history.go(-1)" class="ui-btn-left" data-icon="arrow-l">
+            </div><!--/header-->
+            
+            <div data-role="collapsible" data-theme="b" data-content-theme="a" data-inset="false">
+                <h3>结构物1告警：4</h3>
+                <ul data-role="listview">
+                    <li><a href="#">告警码：0001</a><p>无法接收到编号为1的传感器数据</p></li>
+                    <li><a href="#">告警码：0002</a><p>无法接收到编号为2的传感器数据</p></li>
+                    <li><a href="#">告警码：0003</a><p>无法接收到编号为3的传感器数据</p></li>
+                    <li><a href="#">告警码：0004</a><p>无法接收到编号为4的传感器数据</p></li>
+                </ul>
+            </div><!-- /collapsible -->
+            <div data-role="collapsible" data-theme="b" data-content-theme="a" data-inset="false">
+                <h3>结构物2告警：3</h3>
+                <ul data-role="listview">
+                    <li><a href="#">告警码：0001</a></li>
+                    <li><a href="#">告警码：0002</a></li>
+                    <li><a href="#">告警码：0003</a></li>
+                </ul>
+            </div><!-- /collapsible -->
+            <div data-role="collapsible" data-theme="b" data-content-theme="a" data-inset="false">
+                <h3>结构物3告警：2</h3>
+                <ul data-role="listview">
+                    <li><a href="#">告警码：0001</a><p>无法接收到编号为1的传感器数据</p></li>
+                    <li><a href="#">告警码：0002</a><p>无法接收到编号为2的传感器数据</p></li>
+                </ul>
+            </div><!-- /collapsible -->
+            
+            <!--页脚-->
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="index.html" data-icon="home">主页</a></li>
+                        <li><a href="status.html" data-icon="star">状态</a></li>
+                        <li><a href="warning.html" data-icon="alert" class="ui-btn-active">告警</a></li>
+                        <li><a href="about.html" data-icon="info">关于</a></li>
+                    </ul>
+                </div><!--/navbar-->
+            </div><!--/footer-->            
+        </div> <!--/page-->
+        
+	</body>                        
+</html>
+
